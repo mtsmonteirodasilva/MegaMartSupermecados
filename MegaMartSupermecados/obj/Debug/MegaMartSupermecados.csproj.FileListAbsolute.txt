@@ -1,0 +1,12 @@
+C:\Users\2022102020080\source\repos\MegaMartSupermecados\MegaMartSupermecados\bin\Debug\MegaMartSupermecados.exe.config
+C:\Users\2022102020080\source\repos\MegaMartSupermecados\MegaMartSupermecados\bin\Debug\MegaMartSupermecados.exe
+C:\Users\2022102020080\source\repos\MegaMartSupermecados\MegaMartSupermecados\bin\Debug\MegaMartSupermecados.pdb
+C:\Users\2022102020080\source\repos\MegaMartSupermecados\MegaMartSupermecados\obj\Debug\MegaMartSupermecados.csproj.AssemblyReference.cache
+C:\Users\2022102020080\source\repos\MegaMartSupermecados\MegaMartSupermecados\obj\Debug\MegaMartSupermecados.csproj.SuggestedBindingRedirects.cache
+C:\Users\2022102020080\source\repos\MegaMartSupermecados\MegaMartSupermecados\obj\Debug\MegaMartSupermecados.Form1.resources
+C:\Users\2022102020080\source\repos\MegaMartSupermecados\MegaMartSupermecados\obj\Debug\MegaMartSupermecados.FormularioLogin.resources
+C:\Users\2022102020080\source\repos\MegaMartSupermecados\MegaMartSupermecados\obj\Debug\MegaMartSupermecados.Properties.Resources.resources
+C:\Users\2022102020080\source\repos\MegaMartSupermecados\MegaMartSupermecados\obj\Debug\MegaMartSupermecados.csproj.GenerateResource.cache
+C:\Users\2022102020080\source\repos\MegaMartSupermecados\MegaMartSupermecados\obj\Debug\MegaMartSupermecados.csproj.CoreCompileInputs.cache
+C:\Users\2022102020080\source\repos\MegaMartSupermecados\MegaMartSupermecados\obj\Debug\MegaMartSupermecados.exe
+C:\Users\2022102020080\source\repos\MegaMartSupermecados\MegaMartSupermecados\obj\Debug\MegaMartSupermecados.pdb
