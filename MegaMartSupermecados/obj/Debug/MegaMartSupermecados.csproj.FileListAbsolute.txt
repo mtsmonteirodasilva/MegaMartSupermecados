@@ -10,3 +10,5 @@ C:\Users\2022102020080\source\repos\MegaMartSupermecados\MegaMartSupermecados\ob
 C:\Users\2022102020080\source\repos\MegaMartSupermecados\MegaMartSupermecados\obj\Debug\MegaMartSupermecados.csproj.CoreCompileInputs.cache
 C:\Users\2022102020080\source\repos\MegaMartSupermecados\MegaMartSupermecados\obj\Debug\MegaMartSupermecados.exe
 C:\Users\2022102020080\source\repos\MegaMartSupermecados\MegaMartSupermecados\obj\Debug\MegaMartSupermecados.pdb
+C:\Users\2022102020080\source\repos\MegaMartSupermecados\MegaMartSupermecados\obj\Debug\MegaMartSupermecados.CadastroProduto.resources
+C:\Users\2022102020080\source\repos\MegaMartSupermecados\MegaMartSupermecados\obj\Debug\MegaMartSupermecados.RealizarVenda.resources
