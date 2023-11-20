@@ -10,19 +10,18 @@ using System.Windows.Forms;
 
 namespace MegaMartSupermecados
 {
-    public partial class RealizarVenda : Form
+    public partial class Historico : Form
     {
-     
-        List<Produto> carrinhoDeCompras = new List<Produto>();
-
-        public RealizarVenda()
+        private List<Produto> historicoCadastros;
+        public Historico()
         {
             InitializeComponent();
+            this.historicoCadastros = historicoCadastros;
+
+            // Exibe o histórico de cadastros
+            dataGridViewHistorico.DataSource = historicoCadastros;
         }
 
-        private void bt_vender_Click(object sender, EventArgs e)
-        {
-
-        }
+            
     }
 }

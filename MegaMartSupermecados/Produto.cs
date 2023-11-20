@@ -8,24 +8,43 @@ namespace MegaMartSupermecados
 {
     class Produto
     {
-        public string Descricao { get; set; }
-        public string Codigo { get; set;}
+        public string Nome { get; set; }
+        public int Codigo { get; set;}
         public double PrecoAquisicao { get; set;}
         public double Lucro { get; set;}
-        public double ValorVenda { get; set;}
+        public double preco { get; set;}
+        public int Estoque {  get; set;}
 
         public Produto()
         {
 
         }
 
-        public Produto(string descricao, string codigo, double precoAquisicao, double lucro, double valorVenda)
+        public Produto(string nome, int codigo, double precoAquisicao, double lucro, double valorVenda, int estoque)
         {
-            Descricao = descricao;
+            Nome = nome;
             Codigo = codigo;
             PrecoAquisicao = precoAquisicao;
             Lucro = lucro;
-            ValorVenda = valorVenda;
+            preco = valorVenda;
+            Estoque = estoque;
+        }
+        public void AdicionarEstoque(int quantidade)
+        {
+            Estoque += quantidade;
+        }
+
+        // Método para remover quantidade do estoque
+        public void RemoverEstoque(int quantidade)
+        {
+            if (Estoque >= quantidade)
+            {
+                Estoque -= quantidade;
+            }
+            else
+            {
+                throw new InvalidOperationException("Quantidade em estoque insuficiente.");
+            }
         }
     }
 }

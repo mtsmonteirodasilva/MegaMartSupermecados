@@ -20,5 +20,11 @@ namespace MegaMartSupermecados
             CadastroProduto formCadastro = new CadastroProduto();
             formCadastro.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            GerenciarEstoque formEstoque = new GerenciarEstoque();
+            formEstoque.Show();
+        }
     }
 }

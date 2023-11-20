@@ -46,6 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bt_realizarVenda = new System.Windows.Forms.Button();
+            this.bt_historico = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -209,12 +210,23 @@
             this.bt_realizarVenda.UseVisualStyleBackColor = false;
             this.bt_realizarVenda.Click += new System.EventHandler(this.bt_realizarVenda_Click);
             // 
+            // bt_historico
+            // 
+            this.bt_historico.Location = new System.Drawing.Point(262, 256);
+            this.bt_historico.Name = "bt_historico";
+            this.bt_historico.Size = new System.Drawing.Size(75, 23);
+            this.bt_historico.TabIndex = 36;
+            this.bt_historico.Text = "Ver Historico";
+            this.bt_historico.UseVisualStyleBackColor = true;
+            this.bt_historico.Click += new System.EventHandler(this.bt_historico_Click);
+            // 
             // CadastroProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(686, 450);
+            this.Controls.Add(this.bt_historico);
             this.Controls.Add(this.bt_realizarVenda);
             this.Controls.Add(this.tb_venda);
             this.Controls.Add(this.bt_excluir);
@@ -260,5 +272,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button bt_realizarVenda;
+        private System.Windows.Forms.Button bt_historico;
     }
 }
