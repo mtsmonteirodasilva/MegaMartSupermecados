@@ -9,6 +9,9 @@ namespace MegaMartSupermecados
     public partial class CadastroProduto : Form
     {
         List<Produto> produtos = new List<Produto>();
+        List<HistoricoCadastro> historicoCadastro = new List<HistoricoCadastro>();
+        List<HistoricoVenda> historicoVendas = new List<HistoricoVenda>();
+
         public CadastroProduto()
         {
             InitializeComponent();
@@ -29,6 +32,13 @@ namespace MegaMartSupermecados
                 p.preco = porcentagem;
                 tb_venda.Text = porcentagem.ToString();
                 produtos.Add(p);
+
+                HistoricoCadastro histCadastro = new HistoricoCadastro
+                {
+                    DataCadastro = DateTime.Now,
+                    ProdutoCadastrado = p
+                };
+                historicoCadastro.Add(histCadastro);
 
                 dataGridView1.DataSource = null;
                 dataGridView1.Refresh();
@@ -68,33 +78,43 @@ namespace MegaMartSupermecados
         {
             try
             {
-                // Verifica se há produtos cadastrados
+                
                 if (produtos.Count == 0)
                 {
                     MessageBox.Show("Não há produtos cadastrados para realizar a venda.");
                     return;
                 }
 
-                // Pode implementar aqui a lógica específica da venda, como atualizar estoque, registrar a venda, etc.
-                // Neste exemplo, apenas exibiremos uma mensagem com os detalhes da venda.
-
-                StringBuilder mensagemVenda = new StringBuilder();
+               
                 double totalVenda = 0;
 
                 foreach (Produto produto in produtos)
                 {
-                    mensagemVenda.AppendLine($"Produto: {produto.Nome}, Código: {produto.Codigo}, Preço de Venda: {produto.preco}");
                     totalVenda += produto.preco;
+                }
+
+
+                HistoricoVenda histVenda = new HistoricoVenda
+                {
+                    DataVenda = DateTime.Now,
+                    ProdutosVendidos = new List<Produto>(produtos),
+                    TotalVenda = totalVenda
+                };
+                historicoVendas.Add(histVenda);
+
+                StringBuilder mensagemVenda = new StringBuilder();
+                foreach (Produto produto in produtos)
+                {
+                    mensagemVenda.AppendLine($"Produto: {produto.Nome}, Código: {produto.Codigo}, Preço de Venda: {produto.preco}");
                 }
 
                 mensagemVenda.AppendLine($"Total da Venda: {totalVenda}");
 
+
                 MessageBox.Show(mensagemVenda.ToString(), "Detalhes da Venda");
 
-                // Limpa a lista de produtos após a venda
-                produtos.Clear();
 
-                // Atualiza o DataGridView
+                produtos.Clear();
                 dataGridView1.DataSource = null;
                 dataGridView1.Refresh();
             }
@@ -108,7 +128,7 @@ namespace MegaMartSupermecados
 
         private void bt_historico_Click(object sender, EventArgs e)
         {
-            Historico historico = new Historico();
+            Historico historico = new Historico(historicoCadastro, historicoVendas);
             historico.Show();
         }
     }

@@ -31,8 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Historico));
             this.dataGridViewHistorico = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dataGridViewVendas = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHistorico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVendas)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewHistorico
@@ -53,18 +55,27 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // dataGridViewVendas
+            // 
+            this.dataGridViewVendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewVendas.Location = new System.Drawing.Point(438, 288);
+            this.dataGridViewVendas.Name = "dataGridViewVendas";
+            this.dataGridViewVendas.Size = new System.Drawing.Size(240, 150);
+            this.dataGridViewVendas.TabIndex = 3;
+            // 
             // Historico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridViewVendas);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridViewHistorico);
             this.Name = "Historico";
             this.Text = "Historico";
-            
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHistorico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVendas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -73,5 +84,6 @@
 
         private System.Windows.Forms.DataGridView dataGridViewHistorico;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView dataGridViewVendas;
     }
 }

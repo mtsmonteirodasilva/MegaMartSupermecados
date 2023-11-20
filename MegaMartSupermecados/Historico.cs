@@ -12,16 +12,32 @@ namespace MegaMartSupermecados
 {
     public partial class Historico : Form
     {
-        private List<Produto> historicoCadastros;
-        public Historico()
-        {
-            InitializeComponent();
-            this.historicoCadastros = historicoCadastros;
+        private List<HistoricoCadastro> historicoCadastro;
+        private List<HistoricoVenda> historicoVendas;
 
-            // Exibe o histórico de cadastros
-            dataGridViewHistorico.DataSource = historicoCadastros;
-        }
 
             
+        public Historico(List<HistoricoCadastro> historicoCadastro, List<HistoricoVenda> historicoVendas)
+        {
+            InitializeComponent();
+            this.historicoCadastro = historicoCadastro;
+            this.historicoVendas = historicoVendas;
+            PopulateDataGridView();
+        }
+        private void PopulateDataGridView()
+        {
+           
+            dataGridViewHistorico.Rows.Clear();
+            foreach (var histCadastro in historicoCadastro)
+            {
+                dataGridViewHistorico.Rows.Add(histCadastro.DataCadastro, histCadastro.ProdutoCadastrado.Nome, histCadastro.ProdutoCadastrado.Codigo);
+            }
+
+            dataGridViewVendas.Rows.Clear();
+            foreach (var histVenda in historicoVendas)
+            {
+                dataGridViewVendas.Rows.Add(histVenda.DataVenda, histVenda.TotalVenda);
+            }
+        }
     }
 }

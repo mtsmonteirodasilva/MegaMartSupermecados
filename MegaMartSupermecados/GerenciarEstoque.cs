@@ -31,29 +31,6 @@ namespace MegaMartSupermecados
         }
 
 
-        private void bt_adicionar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int index = dataGridViewEstoque.CurrentCell.RowIndex;
-                Produto produtoSelecionado = Estoque[index];
-
-                // Pode-se implementar uma lógica para adicionar quantidade ao estoque
-                // Aqui, apenas exibimos um MessageBox como exemplo
-
-                int quantidade = Convert.ToInt32(tx_quantidadeEstoque.Text);
-                produtoSelecionado.AdicionarEstoque(quantidade);
-
-                MessageBox.Show($"Estoque atualizado para o produto {produtoSelecionado.Nome}. Nova quantidade em estoque: {produtoSelecionado.Estoque}");
-
-                // Atualiza o DataGridView
-                AtualizarDataGridView();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Erro ao adicionar ao estoque: {ex.Message}");
-            }
-        }
 
         private void bt_remover_Click(object sender, EventArgs e)
         {
@@ -76,6 +53,30 @@ namespace MegaMartSupermecados
             catch (Exception ex)
             {
                 MessageBox.Show($"Erro ao remover do estoque: {ex.Message}");
+            }
+        }
+
+        private void bt_adicionar_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                int index = dataGridViewEstoque.CurrentCell.RowIndex;
+                Produto produtoSelecionado = Estoque[index];
+
+                // Pode-se implementar uma lógica para adicionar quantidade ao estoque
+                // Aqui, apenas exibimos um MessageBox como exemplo
+
+                int quantidade = Convert.ToInt32(tx_quantidadeEstoque.Text);
+                produtoSelecionado.AdicionarEstoque(quantidade);
+
+                MessageBox.Show($"Estoque atualizado para o produto {produtoSelecionado.Nome}. Nova quantidade em estoque: {produtoSelecionado.Estoque}");
+
+                // Atualiza o DataGridView
+                AtualizarDataGridView();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao adicionar ao estoque: {ex.Message}");
             }
         }
     }

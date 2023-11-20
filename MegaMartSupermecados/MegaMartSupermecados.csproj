@@ -76,6 +76,8 @@
     <Compile Include="Historico.Designer.cs">
       <DependentUpon>Historico.cs</DependentUpon>
     </Compile>
+    <Compile Include="HistoricoCadastro.cs" />
+    <Compile Include="HistoricoVenda.cs" />
     <Compile Include="Produto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
